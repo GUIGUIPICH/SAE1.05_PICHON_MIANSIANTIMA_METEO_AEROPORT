@@ -1,3 +1,6 @@
 # SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT
 
 SAE 1.05 Traiter des données
+
+Promisse MIANSIANTIMA 
+Guillaume PICHON
