@@ -10,6 +10,19 @@ def genere_page_web(nom_fichier, titre_page, corps):
     <head>
     <title> Mon titre </title>
     <p> Partie du test SAE traitement dfe donée </p>
+    <table>
+       <tr>
+         <td>Mois</td>
+         <td>Age</td>
+    <tr>
+    <tr>
+         <td>Mars</td>
+         <td>18</td>
+    <tr>
+     </table>
+    
+         
+       
     </head>
     <body>
     Bonjour HTML
