@@ -9,6 +9,7 @@ def genere_page_web(nom_fichier, titre_page, corps):
     </style>
     <head>
     <title> Mon titre </title>
+    <p> Partie du test SAE traitement dfe donée </p>
     </head>
     <body>
     Bonjour HTML
