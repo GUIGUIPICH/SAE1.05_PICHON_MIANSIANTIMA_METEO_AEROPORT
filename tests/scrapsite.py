@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import re
 
 
 url = "https://fr.allmetsat.com/metar-taf/france.php?icao=LFBI"
@@ -9,6 +10,7 @@ print(response)
 
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
+    content = response.text
 
     # wind_direction = soup.find("div", class_="mt").text.split()[1]
     # wind_speed = soup.find("div", class_="mt").text.split()[2]
@@ -18,21 +20,20 @@ if response.status_code == 200:
     # cloud_density = soup.find("div", class_="mt").text.split()[12]
     # visibility = soup.find("div", class_="mt").text.split()[-3]
     
-    observation_section = soup.find('div', class_='c1b')
-    wind_direction = observation_section.find(text="Vent").find_next('b').text
-    wind_speed = observation_section.find(text="Vent").find_next('b').find_next('b').text
-    temperature = observation_section.find(text="Température").find_next('b').text
-    humidity = observation_section.find(text="Humidité").find_next('b').text
-    pressure = observation_section.find(text="Pression").find_next('b').text
-    clouds = observation_section.find(text="Nuages").find_next('b').text
-    visibility = observation_section.find(text="Visibilité").find_next('b').text
-
+    wind_direction = re.search(r"Vent\s*(\d+)\s*kt", content)
+    wind_speed = re.search(r"Vent\s*\d+\s*kt\s*de\s*[^<]*<b>([^<]+)</b>", content)
+    temperature = re.search(r"Température\s*<b>([^<]+)</b>", content)
+    humidity = re.search(r"Humidité\s*<b>([^<]+)</b>", content)
+    pressure = re.search(r"Pression\s*<b>([^<]+)</b>", content)
+    clouds = re.search(r"Nuages\s*<b>([^<]+)</b>", content)
+    visibility = re.search(r"Visibilité\s*([^<]+)</div>", content)
+    
     print(f"Direction du vent : {wind_direction}")
     print(f"Vitesse du vent : {wind_speed}")
     print(f"Température : {temperature}°C")
     print(f"Taux d'humidité : {humidity}%")
     print(f"Pression atmosphérique : {pressure} hPa")
-    print(f"Densité des nuages : {cloud_density}")
+    print(f"Densité des nuages : {clouds}")
     print(f"Visibilité : {visibility}")
 else:
     print(f"Échec de la requête avec le code de statut : {response.status_code}")
