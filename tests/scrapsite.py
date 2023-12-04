@@ -18,13 +18,14 @@ if response.status_code == 200:
     # cloud_density = soup.find("div", class_="mt").text.split()[12]
     # visibility = soup.find("div", class_="mt").text.split()[-3]
     
-    wind_direction = soup.find(text="Vent").find_next('b').text
-    wind_speed = soup.find(text="Vent").find_next('b').find_next('b').text
-    temperature = soup.find(text="Température").find_next('b').text
-    humidity = soup.find(text="Humidité").find_next('b').text
-    pressure = soup.find(text="Pression").find_next('b').text
-    cloud_density = soup.find(text="Nuages").find_next('b').text
-    visibility = soup.find(text="Visibilité").find_next('b').text
+    observation_section = soup.find('div', class_='c1b')
+    wind_direction = observation_section.find(text="Vent").find_next('b').text
+    wind_speed = observation_section.find(text="Vent").find_next('b').find_next('b').text
+    temperature = observation_section.find(text="Température").find_next('b').text
+    humidity = observation_section.find(text="Humidité").find_next('b').text
+    pressure = observation_section.find(text="Pression").find_next('b').text
+    clouds = observation_section.find(text="Nuages").find_next('b').text
+    visibility = observation_section.find(text="Visibilité").find_next('b').text
 
     print(f"Direction du vent : {wind_direction}")
     print(f"Vitesse du vent : {wind_speed}")
