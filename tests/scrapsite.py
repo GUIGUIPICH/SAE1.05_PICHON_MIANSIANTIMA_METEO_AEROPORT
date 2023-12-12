@@ -25,39 +25,38 @@ def weathertoday():
         print("Maintenant \n")
         
         if wind_speed:
-            print(f"Vitesse du vent : {wind_speed.group(1)} kt")
+            wind_speed=wind_speed.group(1)
         else:
-            print("Vitesse du vent : Inconnu")
+            wind_speed="Inconnu"
         if wind_direction:
-            print(f"Direction du vent : {wind_direction.group(1)}")
+            wind_direction=wind_direction.group(1)*1.852
         else:
-            print("Direction du vent : Inconnu")
+            wind_direction="Inconnu"
         if temperature:
-            print(f"Température : {temperature.group(1)} °C")
+            temperature=temperature.group(1)
         else:
-            print("Température : Inconnu")
+            temperature="Inconnu"
         if humidity:
-            print(f"Taux d'humidité : {humidity.group(1)} %")
+            humidity=humidity.group(1)
         else:
-            print("Taux d'humidité : Inconnu")
+            humidity="Inconnu"
         if pressure:
-            print(f"Pression atmosphérique : {pressure.group(1)} hPa")
+            pressure=pressure.group(1)
         else:
-            print("Pression atmosphérique : Inconnu")
+            pressure="Inconnu"
         if visibility:
-            print(f"Visibilité : {visibility.group(1)}")
+            visibility=visibility.group(1)
         else :
-            print("Visibilité : Inconnu")
+            visibility="Inconnu"
         if clouds:
-            print(f"Densité des nuages : {clouds.group(1)}")
+            clouds=clouds.group(1)
         else:
-            print("Densité des nuages : Inconnu")
-        
-    else:
-        print(f"Échec de la requête avec le code de statut : {response.status_code}")
-        
-def weatherforecast():
-    url = "https://fr.allmetsat.com/metar-taf/france.php?icao=LFBI"
+            clouds="Inconnu"
+    return wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds
+
+
+def weatherforecast(k):
+    url = f"https://www.meteoblue.com/fr/meteo/semaine/poitiers_france_2986495?day={k}" #1 = aujourd'hui
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
     response = requests.get(url, headers=headers)
     
@@ -65,6 +64,25 @@ def weatherforecast():
         soup = BeautifulSoup(response.text, 'html.parser')
         content = response.text
 
+        content1 = soup.find('div', class_='tab-content')
+
+        forecast = content1.find('img')['alt']
+        temp_max = content1.find('div', class_='tab-temp-max').get_text(strip=True)
+        temp_min = content1.find('div', class_='tab-temp-min').get_text(strip=True)
+        wind_speed = content1.find('div', class_='wind').get_text(strip=True)
+        wind_direction = content1.find('div', class_='wind').find('span')['class'][1]
+        precipitation = content1.find('div', class_='tab-precip').get_text(strip=True)
+        
+        content2 = soup.find('div', class_='misc')
+        pressure = content2.find('span', class_='value').get_text(strip=True)
+
+        print(f"Prévision: {forecast}")
+        print(f"Température maximale: {temp_max}")
+        print(f"Température minimale: {temp_min}")
+        print(f"Vitesse du vent: {wind_speed}")
+        print(f"Direction du vent: {wind_direction}")
+        print(f"Quantité de précipitations: {precipitation}")
+        print(f"Pression: {pressure}")
 
 
 
