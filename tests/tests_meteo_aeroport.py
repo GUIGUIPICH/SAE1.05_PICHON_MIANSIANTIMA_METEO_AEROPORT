@@ -1,45 +1,28 @@
-def genere_page_web(nom_fichier, titre_page, corps):
-    f = open(nom_fichier,'w',encoding='utf-8')
-    HTML_INDEX = """ <!DOCTYPE html>
-    <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" lang=\"fr\" dir=\"ltr\">
-    <style>
-        table, th, td {
-        border:1px solid black;
-        }
-    </style>
-    <head>
-    <title> Mon titre </title>
-    <p> Partie du test SAE traitement dfe donée </p>
-    <table>
-       <tr>
-         <td>Mois</td>
-         <td>Age</td>
-    <tr>
-    <tr>
-         <td>Mars</td>
-         <td>18</td>
-    <tr>
-     </table>
+from scrapsite import *
+
+def meteoaeroport(airportname):
+    #Mise à jour du temps
     
-         
-       
-    </head>
-    <body>
-    Bonjour HTML
-    </body>
-    </html>
-    """
-    f.write(HTML_INDEX)
-    f.close()
-
-def main():
-    corps = """ <h1> Titre </h1>
-            """
-    genere_page_web("../html/index.html", "mon titre", corps)
-
-if __name__ == "__main__":
-    main()
-
-
-
-
+    #Récupération des liens
+    siteallmetsat=site_allmetsat(airportname)
+    sitemeteoblue=site_meteoblue(airportname)
+    
+    #Mise à jour des variables pour aujourd'hui
+    today = weathertoday(siteallmetsat)
+    wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds = today
+    
+    #Mise à jour des variables pour Demain
+    tomorrow = weatherforecast(1, sitemeteoblue)
+    forecast1, temp_max1, temp_min1, wind_speed1, wind_direction1, precipitation1, pressure1 = tomorrow
+    
+    #Mise à jour des variables pour J+2
+    d2 = weatherforecast(2, sitemeteoblue)
+    forecast2, temp_max2, temp_min2, wind_speed2, wind_direction2, precipitation2, pressure2 = d2
+    
+    #Mise à jour des variables pour J+3
+    d3 = weatherforecast(3, sitemeteoblue)
+    forecast3, temp_max3, temp_min3, wind_speed3, wind_direction3, precipitation3, pressure3 = d3
+    
+    #Ajout des données sur le site internet
+    update_website(wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds, forecast1, temp_max1, temp_min1, wind_speed1, wind_direction1, precipitation1, pressure1, forecast2, temp_max2, temp_min2, wind_speed2, wind_direction2, precipitation2, pressure2, forecast3, temp_max3, temp_min3, wind_speed3, wind_direction3, precipitation3, pressure3)
+    
