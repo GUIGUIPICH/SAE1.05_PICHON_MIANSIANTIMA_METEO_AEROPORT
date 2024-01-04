@@ -1,10 +1,10 @@
-.. Météo d'un aéroport documentation master file, created by
-   sphinx-quickstart on Tue Oct 31 14:44:31 2023.
+.. SAE 105 - Météo d'un Aéroport documentation master file, created by
+   sphinx-quickstart on Thu Jan  4 18:43:23 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Météo d'un aéroport's documentation!
-===============================================
+Welcome to SAE 105 - Météo d'un Aéroport's documentation!
+=========================================================
 
 .. toctree::
    :maxdepth: 2

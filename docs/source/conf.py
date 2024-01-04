@@ -6,9 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "Météo d'un aéroport"
-copyright = '2023, GUILLAUME PICHON; PROMISSE MIANSIANTIMA'
-author = 'GUILLAUME PICHON; PROMISSE MIANSIANTIMA'
+project = "SAE 105 - Météo d'un Aéroport"
+copyright = '2024, Guillaume PICHON - Promisse MIANSIANTIMA'
+author = 'Guillaume PICHON - Promisse MIANSIANTIMA'
+release = '1.00'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
