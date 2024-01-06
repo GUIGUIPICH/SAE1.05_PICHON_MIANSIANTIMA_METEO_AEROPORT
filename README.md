@@ -41,12 +41,15 @@ Vous trouverez dans le projet la structure suivante :
 `meteo_aerport/` : Dossier contenant le programme principal.
 - `meteo_aeroport.py`: Script principal permettant d'exécuter le programme.
 - `module_meteo_aeroport.py`: Module contenant les fonctions du programme.
+
 `tests/` : Dossier contenant les tests unitaires du programme.
 - `test_meteo_aeroport.py`: Fichier de tests unitaires pour les fonctions du module.
+  
 `html/` : Dossier contenant la page web contenant les données finales du programme.
 - `index.html` : Fichier HTML contenant les données.
 - `CSS/` : Fichier contenant les feuilles de style pour la page HTML.
 - `images/` : Contient les images du site web.
+  
 `docs/` : Dossier contenant la documentation Sphynx du programme
 
 ## Documentation
