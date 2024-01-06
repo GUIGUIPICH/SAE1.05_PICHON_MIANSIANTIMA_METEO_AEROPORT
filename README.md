@@ -54,7 +54,7 @@ Vous trouverez dans le projet la structure suivante :
 
 ## Documentation
 
-Une documentation complète réalisée à l'aide du logiciel Sphinx. Celle ci est disponible dans le dossier docs/. Vous y trouverez une documentation du projet ainsi qu'un rappel du cahier des charges de celui ci, et d'autres informatio
+Une documentation complète réalisée à l'aide du logiciel Sphinx. Celle ci est disponible dans le dossier docs/. Vous y trouverez une documentation du projet ainsi qu'un rappel du cahier des charges de celui ci, et d'autres informations.
 
 ## Prérequis
 
