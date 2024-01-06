@@ -125,6 +125,10 @@ def weathertoday(site_allmetsat1):
         # Place "Inconnu" dans le cas où les données sont introuvables, et verifie que ces valeurs sont bien de type str
         if wind_speed:
             wind_speed = wind_speed.group(1)
+            wind_speed = float(wind_speed)
+            wind_speed_kph = wind_speed * 1.852  # Conversion en kilomètres par heure
+            wind_speed_kph = round(wind_speed_kph, 2)
+            wind_speed = str(wind_speed_kph)
         else:
             wind_speed = "Inconnu"
         assert isinstance(wind_speed, str)
