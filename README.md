@@ -37,6 +37,7 @@ Le projet est maintenant installé ! Les données météorologiques pour ce jour
 ## Structure du Projet / Arborescence
 
 Vous trouverez dans le projet la structure suivante :
+
 `meteo_aerport/` : Dossier contenant le programme principal.
 - `meteo_aeroport.py`: Script principal permettant d'exécuter le programme.
 - `module_meteo_aeroport.py`: Module contenant les fonctions du programme.
