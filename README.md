@@ -24,7 +24,7 @@ Les données sont actualisées toutes les 5 minutes
 
 Avant de commencer l’installation, vérifier que Python 3.7 minimum est installé sur le PC, pour vérifier, ouvrir un terminal et taper la commande `python` sur Windows ou `python3` sur Linux, et que la connexion à Internet fonctionne correctement
 1) Ouvrir un terminal à l’emplacement où vous souhaitez installer le projet.
-2) Cloner ensuite le dépôt en utilisant la commande suivante : git clone https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git` 
+2) Cloner ensuite le dépôt en utilisant la commande suivante : `git clone https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git` 
 3) Se placer vous ensuite dans le répertoire du projet : `cd SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT`
 4) Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.
 Windows: `python meteo_aeroport/meteo_aeroport.py –aeroport [NOM_AEROPORT] --output-dir ./../html`
