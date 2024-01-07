@@ -3,26 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SAÉ 15 - Traiter des données
-=======================================
+Météo d'un aéroport
+===================
 
 .. toctree::
    :maxdepth: 1
-   :caption: Objectif général de la SAÉ
+   :caption: Bienvenue !
 
-
-
-   :caption: Objectifs et cahiers des charges
-
+   content/infos
    content/objectifs
    content/cahier_des_charges
    content/code
-
-
-
+   
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+  
+

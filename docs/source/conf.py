@@ -6,6 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join('..', '..')))
+print(sys.path)
+
 project = "Météo d'un aéroport"
 copyright = '2024, Guillaume PICHON - Promisse MIANSIANTIMA'
 author = 'Guillaume PICHON - Promisse MIANSIANTIMA'
@@ -30,8 +36,7 @@ language = 'fr'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
-import sys
-sys.path.insert(0, '/home/guillaume/Documents/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT/meteo_aeroport')
+

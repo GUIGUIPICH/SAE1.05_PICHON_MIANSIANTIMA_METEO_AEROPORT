@@ -1,8 +1,3 @@
-import requests
-from bs4 import BeautifulSoup
-import re
-from datetime import datetime
-
 """
 .. module:: module_meteo_aeroport
    :platform: Unix
@@ -11,6 +6,11 @@ from datetime import datetime
 .. moduleauthor:: Guillaume PICHON <guillaume.pichon@etu.univ-poitiers.fr> Promisse MIANSIANTIMA <promisse.miansiantima@etu.univ-poitiers.fr>
 
 """
+
+import requests
+from bs4 import BeautifulSoup
+import re
+from datetime import datetime
 
 def site_allmetsat(airport_name):
     """

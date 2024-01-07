@@ -1,10 +1,8 @@
 Documentation du code
 *********************
 
-.. automodule:: meteo_aeroport
+En cours de rédaction...
 
-Module 1
-========================
 
-.. automodule:: meteo_aeroport.module_meteo_aeroport
-   :members:
+
+
