@@ -41,7 +41,7 @@ def main():
     #Ajout des données sur le site internet
     update_website(airportname_complete, actualtime, wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds, forecast1, temp_max1, temp_min1, wind_speed1, wind_direction1, precipitation1, pressure1, forecast2, temp_max2, temp_min2, wind_speed2, wind_direction2, precipitation2, pressure2, forecast3, temp_max3, temp_min3, wind_speed3, wind_direction3, precipitation3, pressure3, output_dir)
     
-    print(f"Programme Terminé. Données disponibles dans {output_dir}, Si l'aéroport affiché est incorrect, relancez le programme en écrivant plus précisément l'aéroport (Ex : Lyon St Exupéry au lieu de Lyon) ou en évitant les abréviations (Ex : Charles de Gaulle au lieu de CDG)")
+    print(f"Programme Terminé. Données disponibles dans {output_dir}")
     
 if __name__ == '__main__':
     main()
