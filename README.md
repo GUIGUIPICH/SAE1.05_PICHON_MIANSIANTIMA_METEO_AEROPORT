@@ -50,7 +50,7 @@ Vous trouverez dans le projet la structure suivante :
 - `CSS/` : Fichier contenant les feuilles de style pour la page HTML.
 - `images/` : Contient les images du site web.
   
-`docs/` : Dossier contenant la documentation Sphynx du programme
+`docs/` : Dossier contenant la documentation Sphinx du programme
 
 ## Documentation
 
