@@ -313,7 +313,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Température minimale : {temp_min1}</p>
                 <p>Précipitations : {precipitation1}</p>
                 <p>Pression : {pressure1}</p>
-                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p>
+                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p></div>
     
             <div class="container">
                 <h2>J+2</h2>
@@ -324,7 +324,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Température minimale : {temp_min2}</p>
                 <p>Précipitations : {precipitation2}</p>
                 <p>Pression : {pressure2}</p>
-                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p>
+                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p></div>
                 
             <div class="container">
                 <h2>J+3</h2>
@@ -336,7 +336,6 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Précipitations : {precipitation3}</p>
                 <p>Pression : {pressure3}</p>
                 <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p>
-            </div>
             </div>
         </article>
         </body>
