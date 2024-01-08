@@ -13,7 +13,6 @@ Ce programme a pour but de récupérer les données météo actuelles ainsi que 
 Voici les données affichées :
 - Maintenant : Date et heure, Vitesse et direction du vent, Humidité, Température, Pression, Visibilité, Nuages.
 - Pour les 3 prochains jours : Vitesse et direction du vent, Température maximale et minimale, Prévision météo, Taux de précipitation, Pression.
-Les données sont actualisées toutes les 5 minutes
 
 ## Prérequis 
 
