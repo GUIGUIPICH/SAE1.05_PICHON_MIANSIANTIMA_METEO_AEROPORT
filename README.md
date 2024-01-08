@@ -23,13 +23,14 @@ Voici les données affichées :
 
 Avant de commencer l’installation, vérifier que Python 3.7 minimum est installé sur le PC, pour vérifier, ouvrir un terminal et taper la commande `python` sur Windows ou `python3` sur Linux, et que la connexion à Internet fonctionne correctement
 1) Ouvrir un terminal à l’emplacement où vous souhaitez installer le projet.
-2) Cloner ensuite le dépôt en utilisant la commande suivante : `git clone https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git` 
-3) Se placer vous ensuite dans le répertoire du projet : `cd SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT`
-4) Installer les prérequis : `pip install -r requirements.txt`
-5) Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.
+2) Cloner ensuite le dépôt en utilisant la commande suivante : `git clone https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git`
+   Vous pouvez également télécharger le projet au format ZIP : https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT/releases
+4) Se placer vous ensuite dans le répertoire du projet : `cd SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT`
+5) Installer les prérequis : `pip install -r requirements.txt`
+6) Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.
 Windows: `python meteo_aeroport/meteo_aeroport.py -–aeroport [NOM_AEROPORT] --output-dir ./html`
 Linux: `python3 meteo_aeroport/meteo_aeroport.py –-aeroport [NOM_AEROPORT] --output-dir ./html`
-6) Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L'accès est également possible en tapant `https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html` dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).
+7) Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L'accès est également possible en tapant `https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html` dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).
 
 Le projet est maintenant installé ! Les données météorologiques pour ce jour et les jours suivants sont affichées sur la page HTML. 
 
