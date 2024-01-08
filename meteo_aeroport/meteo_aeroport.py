@@ -5,14 +5,15 @@ import time
 import argparse
 
 def main():
-	 """
-    Script principal du projet 
+    """
+    Script principal du projet
 
     Utilise argparse pour analyser les arguments en ligne de commandes puis appelle les différentes fonctions afin d'aboutir en la génération de la page web.
 
     :returns: Aucun
     :rtype: None
     """
+    
     # Définir le parseur d'arguments
     parser = argparse.ArgumentParser(description='Affiche le nom de l\'aéroport et le répertoire de sortie.')
 
