@@ -97,8 +97,7 @@
 <h2>Données affichées<a class="headerlink" href="#donnees-affichees" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Voici les données affichées :
 - Maintenant : Date et heure, Vitesse et direction du vent, Humidité, Température, Pression, Visibilité, Nuages.
-- Pour les 3 prochains jours : Vitesse et direction du vent, Température maximale et minimale, Prévision météo, Taux de précipitation, Pression.
-Les données sont actualisées toutes les 5 minutes</p>
+- Pour les 3 prochains jours : Vitesse et direction du vent, Température maximale et minimale, Prévision météo, Taux de précipitation, Pression.</p>
 </section>
 <section id="prerequis">
 <h2>Prérequis<a class="headerlink" href="#prerequis" title="Lien permanent vers cette rubrique"></a></h2>
@@ -125,17 +124,20 @@ Les données sont actualisées toutes les 5 minutes</p>
 <li><p>Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.</p>
 <ul>
 <li><p>Sous Windows :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>meteo_aeroport/meteo_aeroport.py<span class="w"> </span>–aeroport<span class="w"> </span><span class="o">[</span>NOM_AEROPORT<span class="o">]</span><span class="w"> </span>--output-dir<span class="w"> </span>./../html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>meteo_aeroport/meteo_aeroport.py<span class="w"> </span>–-aeroport<span class="w"> </span><span class="o">[</span>NOM_AEROPORT<span class="o">]</span><span class="w"> </span>--output-dir<span class="w"> </span>./html
 </pre></div>
 </div>
 </li>
 <li><p>Sous Linux :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>meteo_aeroport/meteo_aeroport.py<span class="w"> </span>–aeroport<span class="w"> </span><span class="o">[</span>NOM_AEROPORT<span class="o">]</span><span class="w"> </span>--output-dir<span class="w"> </span>./../html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>meteo_aeroport/meteo_aeroport.py<span class="w"> </span>–-aeroport<span class="w"> </span><span class="o">[</span>NOM_AEROPORT<span class="o">]</span><span class="w"> </span>--output-dir<span class="w"> </span>./html
 </pre></div>
 </div>
 </li>
 </ul>
 </li>
+</ol>
+<p>Note : L’aéroport doit être tapé en 1 seul mot. Dans le cas où celui-ci en prend plusieurs, remplacer les espaces par des underscore (« _ »). Pour éviter les erreurs sur le choix de l’aéroport, veuillez taper le plus précisément possible le nom de l’aéroport, et éviter les abréviations.</p>
+<ol class="arabic simple" start="5">
 <li><p>Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L’accès est également possible en tapant <cite>https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html</cite> dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).</p></li>
 </ol>
 <p>Le projet est maintenant installé ! Les données météorologiques pour ce jour et les jours suivants sont affichées sur la page HTML.</p>
@@ -143,21 +145,21 @@ Les données sont actualisées toutes les 5 minutes</p>
 <section id="structure-du-projet-arborescence">
 <h2>Structure du Projet / Arborescence<a class="headerlink" href="#structure-du-projet-arborescence" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Vous trouverez dans le projet la structure suivante :</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>meteo_aerport/ : Dossier contenant le programme principal.
+<span class="m">-</span> meteo_aeroport.py: Script principal permettant d&#39;exécuter le programme.
+<span class="m">-</span> module_meteo_aeroport.py: Module contenant les fonctions du programme.
+
+tests/ : Dossier contenant les tests unitaires du programme.
+<span class="m">-</span> test_meteo_aeroport.py: Fichier de tests unitaires pour les fonctions du module.
+
+html/ : Dossier contenant la page web contenant les données finales du programme.
+<span class="m">-</span> index.html : Fichier HTML contenant les données.
+<span class="m">-</span> CSS/ : Fichier contenant les feuilles de style pour la page HTML.
+<span class="m">-</span> images/ : Contient les images du site web.
+
+docs/ : Dossier contenant la documentation Sphinx du programme
 </pre></div>
 </div>
-<p>meteo_aerport/ : Dossier contenant le programme principal.
-- meteo_aeroport.py: Script principal permettant d’exécuter le programme.
-- module_meteo_aeroport.py: Module contenant les fonctions du programme.</p>
-<p>tests/ : Dossier contenant les tests unitaires du programme.
-- test_meteo_aeroport.py: Fichier de tests unitaires pour les fonctions du module.</p>
-<p>html/ : Dossier contenant la page web contenant les données finales du programme.
-- index.html : Fichier HTML contenant les données.
-- CSS/ : Fichier contenant les feuilles de style pour la page HTML.
-- images/ : Contient les images du site web
-docs/ : Dossier contenant la documentation Sphinx du programme</p>
-</div></blockquote>
 </section>
 <section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Lien permanent vers cette rubrique"></a></h2>

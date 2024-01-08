@@ -22,7 +22,6 @@ Données affichées
 Voici les données affichées :
 - Maintenant : Date et heure, Vitesse et direction du vent, Humidité, Température, Pression, Visibilité, Nuages.
 - Pour les 3 prochains jours : Vitesse et direction du vent, Température maximale et minimale, Prévision météo, Taux de précipitation, Pression.
-Les données sont actualisées toutes les 5 minutes
 
 Prérequis 
 =========
@@ -55,13 +54,16 @@ Avant de commencer l’installation, vérifier que Python 3.7 minimum est instal
 
      .. code-block:: bash 
          
-         python meteo_aeroport/meteo_aeroport.py –aeroport [NOM_AEROPORT] --output-dir ./../html
+         python meteo_aeroport/meteo_aeroport.py –-aeroport [NOM_AEROPORT] --output-dir ./html
 
    - Sous Linux : 
 
      .. code-block:: bash
        
-         python3 meteo_aeroport/meteo_aeroport.py –aeroport [NOM_AEROPORT] --output-dir ./../html
+         python3 meteo_aeroport/meteo_aeroport.py –-aeroport [NOM_AEROPORT] --output-dir ./html
+
+
+Note : L’aéroport doit être tapé en 1 seul mot. Dans le cas où celui-ci en prend plusieurs, remplacer les espaces par des underscore (« _ »). Pour éviter les erreurs sur le choix de l’aéroport, veuillez taper le plus précisément possible le nom de l’aéroport, et éviter les abréviations.
 
 5) Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L'accès est également possible en tapant `https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html` dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).
 
@@ -74,20 +76,22 @@ Structure du Projet / Arborescence
 
 Vous trouverez dans le projet la structure suivante :
 
-	.. code-block:: bash
-	
-	meteo_aerport/ : Dossier contenant le programme principal.
-	- meteo_aeroport.py: Script principal permettant d'exécuter le programme.
-	- module_meteo_aeroport.py: Module contenant les fonctions du programme.
+.. code-block:: rst
 
-	tests/ : Dossier contenant les tests unitaires du programme.
-	- test_meteo_aeroport.py: Fichier de tests unitaires pour les fonctions du module.
-	  
-	html/ : Dossier contenant la page web contenant les données finales du programme.
-	- index.html : Fichier HTML contenant les données.
-	- CSS/ : Fichier contenant les feuilles de style pour la page HTML.
-	- images/ : Contient les images du site web
-	docs/ : Dossier contenant la documentation Sphinx du programme
+    meteo_aerport/ : Dossier contenant le programme principal.
+    - meteo_aeroport.py: Script principal permettant d'exécuter le programme.
+    - module_meteo_aeroport.py: Module contenant les fonctions du programme.
+
+    tests/ : Dossier contenant les tests unitaires du programme.
+    - test_meteo_aeroport.py: Fichier de tests unitaires pour les fonctions du module.
+
+    html/ : Dossier contenant la page web contenant les données finales du programme.
+    - index.html : Fichier HTML contenant les données.
+    - CSS/ : Fichier contenant les feuilles de style pour la page HTML.
+    - images/ : Contient les images du site web.
+
+    docs/ : Dossier contenant la documentation Sphinx du programme
+
 	
 Documentation
 =============
