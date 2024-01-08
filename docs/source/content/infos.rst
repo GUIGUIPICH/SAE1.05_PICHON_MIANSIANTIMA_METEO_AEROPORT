@@ -42,13 +42,21 @@ Avant de commencer l’installation, vérifier que Python 3.7 minimum est instal
        
        git clone https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git
 
+Vous pouvez également télécharger le projet au format ZIP : `https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT/releases <https://github.com/GUIGUIPICH/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT/releases>`_.
+
 3) Se placer ensuite dans le répertoire du projet : 
 
    .. code-block:: bash
        
        cd SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT
+       
+4) Installer les modules requis à l'aide de la commande suivante
 
-4) Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.
+   .. code-block:: bash
+       
+       pip install -r requirements.txt
+       
+5) Lancer ensuite le programme en utilisant la commande suivante, en remplaçant [NOM_AEROPORT] par l’aéroport que vous souhaitez utiliser.
 
    - Sous Windows : 
 
@@ -65,7 +73,7 @@ Avant de commencer l’installation, vérifier que Python 3.7 minimum est instal
 
 Note : L’aéroport doit être tapé en 1 seul mot. Dans le cas où celui-ci en prend plusieurs, remplacer les espaces par des underscore (« _ »). Pour éviter les erreurs sur le choix de l’aéroport, veuillez taper le plus précisément possible le nom de l’aéroport, et éviter les abréviations.
 
-5) Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L'accès est également possible en tapant `https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html` dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).
+6) Les données sont accessibles ensuite dans le fichier html/index.html de l’arborescence. L'accès est également possible en tapant `https://[REP_PROJET]/SAE1.05_PICHON_MIANSIANTIMA_METEO_AEROPORT.git/html/index.html` dans votre navigateur (en remplaçant [REP_PROJET] par le dossier où vous avez placé l’arborescence).
 
 
 Le projet est maintenant installé ! Les données météorologiques pour ce jour et les jours suivants sont affichées sur la page HTML. 

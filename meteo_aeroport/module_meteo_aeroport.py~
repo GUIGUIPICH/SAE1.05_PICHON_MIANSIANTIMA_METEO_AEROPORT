@@ -266,7 +266,7 @@ def time_1():
     assert isinstance(actualtime, str), f"La valeur retournée n'est pas de type str: {type(actualtime)}"
     return actualtime
 
-def update_website(airportname_complete, actualtime, wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds,  forecast1, temp_max1, temp_min1, wind_speed1, wind_direction1, precipitation1, pressure1, forecast2, temp_max2, temp_min2, wind_speed2, wind_direction2, precipitation2, pressure2, forecast3, temp_max3, temp_min3, wind_speed3, wind_direction3, precipitation3, pressure3, output_dir, siteallmetsat, sitemeteoblue):
+def update_website(airportname_complete, actualtime, wind_speed, wind_direction, temperature, humidity, pressure, visibility, clouds,  forecast1, temp_max1, temp_min1, wind_speed1, wind_direction1, precipitation1, pressure1, forecast2, temp_max2, temp_min2, wind_speed2, wind_direction2, precipitation2, pressure2, forecast3, temp_max3, temp_min3, wind_speed3, wind_direction3, precipitation3, pressure3, output_dir):
     """ 
     Cette fonction permet de mettre à jour le site web à l'aide des données entrées
 
@@ -301,7 +301,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Pression : {pressure} hPa</p>
                 <p>Visibilité {visibility}</p>
                 <p>Nuages : {clouds}</p>
-                <p>Source des données : <a href="{siteallmetsat}">Allmetsat</a></p>
+                <p>Source des données : <a href="https://allmetsat.com">Allmetsat</a></p>
             </div>
     
             <div class="container">
@@ -313,7 +313,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Température minimale : {temp_min1}</p>
                 <p>Précipitations : {precipitation1}</p>
                 <p>Pression : {pressure1}</p>
-                <p>Source des données : <a href="{sitemeteoblue}">Meteoblue</a></p></div>
+                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p></div>
     
             <div class="container">
                 <h2>J+2</h2>
@@ -324,7 +324,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Température minimale : {temp_min2}</p>
                 <p>Précipitations : {precipitation2}</p>
                 <p>Pression : {pressure2}</p>
-                <p>Source des données : <a href="{sitemeteoblue}">Meteoblue</a></p></div>
+                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p></div>
                 
             <div class="container">
                 <h2>J+3</h2>
@@ -335,7 +335,7 @@ def update_website(airportname_complete, actualtime, wind_speed, wind_direction,
                 <p>Température minimale : {temp_min3}</p>
                 <p>Précipitations : {precipitation3}</p>
                 <p>Pression : {pressure3}</p>
-                <p>Source des données : <a href="{sitemeteoblue}">Meteoblue</a></p>
+                <p>Source des données : <a href="https://meteoblue.com">Meteoblue</a></p>
             </div>
         </article>
         </body>
